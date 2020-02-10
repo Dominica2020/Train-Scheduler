@@ -1,0 +1,23 @@
+.display-4 {
+    text-align: center;
+    font-size: 80px;
+}
+
+.lead {
+    text-align: center;
+}
+
+.box {
+    border-style: solid;
+    border-width: thin;
+    border-color: #eb72ca; 
+}
+
+form, h4 {
+    padding: 10px;
+}
+
+h4 {
+    background-color: #eb72ca;
+    padding: 10px;
+}
