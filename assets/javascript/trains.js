@@ -20,6 +20,13 @@ var firebaseConfig = {
 
   //---------Pseudocode Notes---------//
   // Create ability for user to add and submit train details
+
+  // Submitted details should update the database & HTML
+
+  // Use Moment.js to determine next train times
+
+  var randomTime = "12:00:00";
+  var randomFormat = "hh:mm:ss";
   
 
 
