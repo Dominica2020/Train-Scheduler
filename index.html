@@ -20,62 +20,64 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="jumbotron">
-          <h1 class="display-4">Let's Go!</h1>
-          <p class="lead">Find your next train below for an amazing adventure!</p>
+          <h1 class="display-4">Let<span>'</span>s Go<span>!</span></h1>
+          <p class="lead">Find your next train for an amazing adventure!</p>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-12">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Train Name</th>
-              <th scope="col">Destination</th>
-              <th scope="col">Frequency (min)</th>
-              <th scope="col">Next Arrival</th>
-              <th scope="col">Minutes Away</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">X</th>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-            </tr>
-            <tr>
-              <th scope="row">X</th>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-            </tr>
-            <tr>
-              <th scope="row">X</th>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-            </tr>
-            <tr>
-              <th scope="row">X</th>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-            </tr>
-            <tr>
-              <th scope="row">X</th>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-              <td>X</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="titleName">Train Name</th>
+                <th scope="col" class="titleName">Destination</th>
+                <th scope="col" class="titleName">Frequency (min)</th>
+                <th scope="col" class="titleName">Next Arrival</th>
+                <th scope="col" class="titleName">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">London Breeze</th>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <th scope="row">The Gherkin</th>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <th scope="row">Shard Away</th>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <th scope="row">Westminster Flash</th>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <th scope="row">Piccadilly 5.0</th>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -114,7 +116,8 @@
 
 
 
-  <!-- Optional JavaScript -->
+
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -125,6 +128,17 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Firebase Core JavaScript Link -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <!-- Specific Firebase products we want (Database) -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+  <!-- Main JavaScript File-->
+  <script src="assets/javascript/trains.js"></script>
 </body>
 
 </html>

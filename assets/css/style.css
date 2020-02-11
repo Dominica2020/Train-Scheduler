@@ -17,7 +17,11 @@ form, h4 {
     padding: 10px;
 }
 
-h4 {
+h4, .titleName {
     background-color: #eb72ca;
-    padding: 10px;
 }
+
+span {
+    color: #eb72ca;
+}
+
