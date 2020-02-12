@@ -19,23 +19,38 @@ var firebaseConfig = {
   var database = firebase.database();
 
   // Global Time Variables
-
-  var randomTime = "12:00:00";
-  var randomFormat = "hh:mm:ss";
+  //var randomTime = "12:00:00";
+  //var randomFormat = "hh:mm:ss";
 
   //---------Pseudocode Notes---------//
+
   // Create ability for user to add and submit train details
-
-  // Submitted details should update the HTML & database
-
-  // Use Moment.js to determine minutes away
-
   $("button").on("click", function () {
-    alert("Submitted");
-    var newRow = $("<>")
+    alert("Submission Received");
+    var trainName = $("#exampleInputName").val().trim();
+    var destination = $("#exampleInputDestination").val().trim();
+    var time = $("#exampleInputTime").val().trim();
+    var frequency = $("#exampleInputMinutes").val().trim();
+    var minutesAaway = $("#formMinutesAway").text("TBD");
+
+    console.log(trainName);
+    console.log(destination);
+    console.log(time);
+    console.log(frequency);
+    //console.log(minutesAaway);
+
+   // Update HTML with submitted details
+    $("#formName").append(trainName);
+    $("#formDestination").append(destination);
+    $("#formTime").append(time);
+    $("#formFrequency").append(frequency);
+    $("#formMinutesAway").append(minutesAaway);
+
+
   });
 
-
   
+  // Update database with submitted details
 
+  // Use Moment.js to determine minutes away
 
