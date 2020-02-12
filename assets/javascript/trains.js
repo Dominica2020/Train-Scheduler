@@ -18,15 +18,24 @@ var firebaseConfig = {
   // Database Variable
   var database = firebase.database();
 
-  //---------Pseudocode Notes---------//
-  // Create ability for user to add and submit train details
-
-  // Submitted details should update the database & HTML
-
-  // Use Moment.js to determine next train times
+  // Global Time Variables
 
   var randomTime = "12:00:00";
   var randomFormat = "hh:mm:ss";
+
+  //---------Pseudocode Notes---------//
+  // Create ability for user to add and submit train details
+
+  // Submitted details should update the HTML & database
+
+  // Use Moment.js to determine minutes away
+
+  $("button").on("click", function () {
+    alert("Submitted");
+    var newRow = $("<>")
+  });
+
+
   
 
 
