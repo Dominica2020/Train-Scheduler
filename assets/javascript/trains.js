@@ -11,16 +11,30 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  firebase.database().ref().on("value",function(snapshot){
+  firebase.database().ref().on("child_added",function(snapshot){ //listens to what is added to the DB. Use child_added instead of value.
       console.log(snapshot.val());
+      console.log(snapshot.val().time);
+
+      var train = snapshot.val();
+      console.log(train.time, train.destination);
+  //template literals
+      var newTableRow = $(
+        `<tr class="formValues"> 
+          <th scope="row" class="formName"> ${train.trainName} 
+            <td class="formDestination"> ${train.destination} </td> 
+            <td class="formFrequency"> ${train.frequency} </td>
+            <td class="formTime"> ${train.time} </td>
+            <td class="formMinutesAway"> TBD </td>
+          </th>
+        </tr>`
+      );
+
+    $("tbody").append(newTableRow);
+    
   })
 
   // Database Variable
   var database = firebase.database();
-
-  // Global Time Variables
-  //var randomTime = "12:00:00";
-  //var randomFormat = "hh:mm:ss";
 
   //---------Pseudocode Notes---------//
 
@@ -31,26 +45,28 @@ var firebaseConfig = {
     var destination = $("#exampleInputDestination").val().trim();
     var time = $("#exampleInputTime").val().trim();
     var frequency = $("#exampleInputMinutes").val().trim();
-    var minutesAaway = $("#formMinutesAway").text("TBD");
+   
+    //var minutesAaway = $("#formMinutesAway").text("TBD"); will calculate this when putting on the screen
 
     console.log(trainName);
     console.log(destination);
     console.log(time);
-    console.log(frequency);
+    console.log(frequency); 
+
     //console.log(minutesAaway);
 
-   // Update HTML with submitted details
-    $("#formName").append(trainName);
-    $("#formDestination").append(destination);
-    $("#formTime").append(time);
-    $("#formFrequency").append(frequency);
-    $("#formMinutesAway").append(minutesAaway);
-
+    //Pushing input values to DB (if you decide to do a column w/ the same name as the var/key name you can do the shorthand below)
+    database.ref().push({
+      trainName,
+      destination,
+      time,
+      frequency,
+  });
 
   });
 
-  
-  // Update database with submitted details
-
   // Use Moment.js to determine minutes away
+
+  
+
 

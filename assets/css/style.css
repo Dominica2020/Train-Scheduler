@@ -5,6 +5,7 @@
 
 .lead {
     text-align: center;
+    font-size: 25px;
 }
 
 .box {
@@ -24,4 +25,5 @@ h4, .titleName {
 span {
     color: #eb72ca;
 }
+
 
