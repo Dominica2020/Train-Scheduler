@@ -11,12 +11,17 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+  // Use Moment.js to determine minutes away
+  //moment().endOf('day').fromNow();
+
+  //Save form inputs to database
   firebase.database().ref().on("child_added",function(snapshot){ //listens to what is added to the DB. Use child_added instead of value.
       console.log(snapshot.val());
       console.log(snapshot.val().time);
 
       var train = snapshot.val();
       console.log(train.time, train.destination);
+
   //template literals
       var newTableRow = $(
         `<tr class="formValues"> 
@@ -45,15 +50,20 @@ var firebaseConfig = {
     var destination = $("#exampleInputDestination").val().trim();
     var time = $("#exampleInputTime").val().trim();
     var frequency = $("#exampleInputMinutes").val().trim();
-   
-    //var minutesAaway = $("#formMinutesAway").text("TBD"); will calculate this when putting on the screen
 
     console.log(trainName);
     console.log(destination);
     console.log(time);
     console.log(frequency); 
+    
+    //var minutesAaway = $("#formMinutesAway").text("TBD"); will calculate this when putting on the screen
+      //var remainder = moment().diff(moment.unix(time),"minutes")%frequency;
+      //var minutes = frequency - remainder;
+      //var arrival = moment().add(minutes,"m").format("hh:mm A");
 
-    //console.log(minutesAaway);
+      //console.log(remainder);
+      //console.log(minutes);
+      //console.log(arrival);
 
     //Pushing input values to DB (if you decide to do a column w/ the same name as the var/key name you can do the shorthand below)
     database.ref().push({
@@ -65,7 +75,7 @@ var firebaseConfig = {
 
   });
 
-  // Use Moment.js to determine minutes away
+
 
   
 
